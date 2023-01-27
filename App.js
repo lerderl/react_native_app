@@ -1,6 +1,7 @@
 import Remo from './assets/remo.png'
 import { StatusBar } from 'expo-status-bar';
 import { Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import Clubs from './components/Clubs';
 
 export default function App() {
   return (
@@ -19,15 +20,18 @@ export default function App() {
           source={Remo}
           style={{width: 200, height: 200, }}
         />
+        <TextInput
+          style={{
+            height: 40,
+            borderColor: 'gray',
+            borderWidth: 1,
+          }}
+          defaultValue="Enter club name"
+        />
       </View>
-      <TextInput
-        style={{
-          height: 40,
-          borderColor: 'gray',
-          borderWidth: 1,
-        }}
-        defaultValue="Enter club name"
-      />
+      <Clubs clubName = 'Remo stars' state = 'Osun' />
+      <Clubs clubName = 'Bendel' state = 'Edo' />
+      <Clubs clubName = 'Akwa United' state = 'Akwa-Ibom' />
       <StatusBar style="auto" />
     </ScrollView>
   );
