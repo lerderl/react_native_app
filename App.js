@@ -11,7 +11,7 @@ export default function App() {
     //   <TextInput>Open up App.js to start working on your app!</TextInput>
     //   <StatusBar style="auto" />
     // </View>
-    <ScrollView style={{ padding: 50 }}>
+    <ScrollView style={{ padding: 5, margin: 25 }}>
       <Text>Clubs</Text>
       <View>
         <Text>Season</Text>

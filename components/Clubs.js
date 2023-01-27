@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {Button, Text, View} from 'react-native';
+import {Button, ScrollView, Text, View} from 'react-native';
 
 const Clubs = ({ clubName, state }) => {
   // const clubName = 'Remo stars';
@@ -12,12 +12,12 @@ const Clubs = ({ clubName, state }) => {
   const [firstDivision, setFirstDivision] = useState(false);
 
   return (
-    <View>
+    <ScrollView>
       <Text>
         {getClubDetail(clubName, state)}, is{" "}
         {firstDivision
           ? "in the first division"
-          : "is not in the first division"}
+          : "not in the first division"}
       </Text>
       <Button
         disabled={firstDivision}
@@ -30,7 +30,58 @@ const Clubs = ({ clubName, state }) => {
             : "Not in the first division"
         }
       />
-    </View>
+      <Text>
+        {getClubDetail(clubName, state)}, is{" "}
+        {firstDivision
+          ? "in the first division"
+          : "not in the first division"}
+      </Text>
+      <Button
+        disabled={firstDivision}
+        onPress={() => {
+          setFirstDivision(true);
+        }}
+        title={
+          firstDivision
+            ? "Currently in the first division"
+            : "Not in the first division"
+        }
+      />
+      <Text>
+        {getClubDetail(clubName, state)}, is{" "}
+        {firstDivision
+          ? "in the first division"
+          : "not in the first division"}
+      </Text>
+      <Button
+        disabled={firstDivision}
+        onPress={() => {
+          setFirstDivision(true);
+        }}
+        title={
+          firstDivision
+            ? "Currently in the first division"
+            : "Not in the first division"
+        }
+      />
+      <Text>
+        {getClubDetail(clubName, state)}, is{" "}
+        {firstDivision
+          ? "in the first division"
+          : "not in the first division"}
+      </Text>
+      <Button
+        disabled={firstDivision}
+        onPress={() => {
+          setFirstDivision(true);
+        }}
+        title={
+          firstDivision
+            ? "Currently in the first division"
+            : "Not in the first division"
+        }
+      />
+    </ScrollView>
   );
 };
 

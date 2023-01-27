@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {Text, TextInput, View} from 'react-native';
 
-// import Npfl from '../assets/npfl.png';
+import Npfl from '../assets/npfl.png';
 
 const NpflTranslator = () => {
   // Store text value
@@ -18,7 +18,7 @@ const NpflTranslator = () => {
       <Text style={{padding: 10, fontSize: 42}}>
         {text
           .split(' ')
-          .map(word => (word && '🍕'))
+          .map(word => (word && `${Npfl}`))
           .join(' ')}
       </Text>
     </View>
