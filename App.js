@@ -1,7 +1,9 @@
-import Remo from './assets/remo.png'
 import { StatusBar } from 'expo-status-bar';
 import { Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+
+import Remo from './assets/remo.png'
 import Clubs from './components/Clubs';
+import NpflTranslator from './components/NpflTranslator';
 
 export default function App() {
   return (
@@ -18,16 +20,17 @@ export default function App() {
           //   uri: 'https://reactnative.dev/docs/assets/p_cat2.png',
           // }}
           source={Remo}
-          style={{width: 200, height: 200, }}
+          style={{ width: 200, height: 200 }}
         />
-        <TextInput
+        {/* <TextInput
           style={{
             height: 40,
             borderColor: 'gray',
             borderWidth: 1,
           }}
           defaultValue="Enter club name"
-        />
+        /> */}
+        <NpflTranslator />
       </View>
       <Clubs clubName = 'Remo stars' state = 'Osun' />
       <Clubs clubName = 'Bendel' state = 'Edo' />
